@@ -1,0 +1,18 @@
+<a class="btn btn-primary" href="#!/">Left</a>
+<a class="btn btn-primary" href="#!/eventos/{{session.id}}">New</a>
+
+<div class="checkbox mb-3"></div>
+<h1 class="h3 mb-3 font-weight-normal">Events</h1>
+<div class="checkbox mb-3"></div>
+
+<div class="card" style="width: 18rem;" ng-repeat="evento in eventos">
+    <div class="card-body">
+      <h5 class="card-title">{{evento.titulo}}</h5>
+      <p class="card-text">{{evento.descricao}}</p>
+
+        <p>
+            <a class="btn btn-primary" href="#!/eventos/{{evento.usuarioId}}/{{evento.id}}">Edit</a>
+            <button type="button" class="btn btn-danger" ng-click="excluir(evento)">Delete</button>
+        </p>
+    </div>
+  </div>
