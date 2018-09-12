@@ -28,8 +28,6 @@ window.app.controller('homeController', function($scope, APIService,  $routePara
     $scope.acessar = function(){
         if(!$scope.usuario.login) return window.alert('Login not informed!')
         if(!$scope.usuario.senha) return window.alert('Password not informed!')
-
-        console.log($routeParams)
         
         APIService.access($scope.usuario, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
@@ -41,6 +39,22 @@ window.app.controller('homeController', function($scope, APIService,  $routePara
             }
             
             url = url + '/' + $scope.usuario.id
+
+            window.location.href =  url
+        })
+    }
+
+    $scope.eventosUsuario = function(){
+        APIService.access($scope.usuario, function(err, data){
+            if(err) return window.alert(JSON.stringify(err))
+
+            $scope.usuario = data[0]
+            
+            if($scope.usuario == undefined){
+                return window.alert('User not found!')
+            }
+            
+            url = url + '/eventos/' + $scope.usuario.id
 
             window.location.href =  url
         })

@@ -14,15 +14,19 @@ window.app.config(function($routeProvider, $locationProvider){
             templateUrl: 'view/home.html',
             controller: 'homeController'
         })
-        .when('/eventos', {
+        .when('/home/eventos/:usuarioId', {
+            templateUrl: 'view/eventos.html',
+            controller: 'homeController'
+        })
+        .when('/manutencao-eventos', {
             templateUrl: 'view/manutencao-eventos.html',
             controller: 'eventoController'
         })
-        .when('/eventos/:usuarioId', {
+        .when('/manutencao-eventos/:usuarioId', {
             templateUrl: 'view/manutencao-eventos.html',
             controller: 'eventoController'
         })
-        .when('/eventos/:usuarioId/:id', {
+        .when('/manutencao-eventos/:usuarioId/:id', {
             templateUrl: 'view/manutencao-eventos.html',
             controller: 'eventoController'
         })
