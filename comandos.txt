@@ -1,5 +1,0 @@
-No DOS executando como adm, na pasta do projeto executar os seguintes comandos para subir a aplicação.
-
-json-server --watch db.json
-
-http-server
