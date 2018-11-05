@@ -1,0 +1,54 @@
+{
+  "usuarios": [
+    {
+      "login": "juliano",
+      "senha": "123",
+      "id": 1
+    },
+    {
+      "login": "teste",
+      "senha": "123",
+      "id": 2
+    },
+    {
+      "login": "marcelo",
+      "senha": "123",
+      "id": 3
+    }
+  ],
+  "eventos": [
+    {
+      "titulo": "Teste 1",
+      "usuarioId": 1,
+      "usuarioLogin": "juliano",
+      "descricao": "Teste 1 teste 1",
+      "organizador": "Teste 1",
+      "id": 1
+    },
+    {
+      "titulo": "Futebol",
+      "descricao": "revanche pra ganhar coca cola",
+      "organizador": "Marcelo / Juliano",
+      "usuarioId": 3,
+      "usuarioLogin": "marcelo",
+      "id": 2
+    },
+    {
+      "titulo": "teste 2",
+      "descricao": "teste 2",
+      "organizador": "teste 2",
+      "usuarioId": 1,
+      "usuarioLogin": "juliano",
+      "id": 3
+    },
+    {
+      "titulo": "teste 3",
+      "descricao": "teste 3",
+      "organizador": "teste 3",
+      "usuarioId": 1,
+      "usuarioLogin": "juliano",
+      "id": 4
+    }
+  ],
+  "produtor": []
+}
