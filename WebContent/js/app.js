@@ -4,7 +4,7 @@ window.app.config(function($routeProvider, $locationProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'view/login.html',
-            controller: 'homeController'
+            controller: 'loginController'
         })
         .when('/usuarios', {
             templateUrl: 'view/cadastro-usuarios.html',

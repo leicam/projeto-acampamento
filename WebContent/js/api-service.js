@@ -1,5 +1,5 @@
 window.app.service('APIService', function($http){
-    var url = "http://localhost:3000"
+    var url = "http://localhost:8080/manager"
     
 
     this.register = function(usuario, callback){
@@ -23,10 +23,9 @@ window.app.service('APIService', function($http){
         )
     }
 
-    this.access = function(usuario, callback){
-        var urlConsulta = url + '/usuarios?login=' + usuario.login + '&senha=' + usuario.senha
-        
-        $http.get(urlConsulta).then(
+    this.singin = function(user, callback){
+        $http.get(url + '/usuario', {user : user.login, password : user.password})
+        then(
             function(res){
                 callback(null, res.data)
             },
